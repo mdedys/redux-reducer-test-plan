@@ -1,10 +1,14 @@
 language: node_js
-
 node_js:
 - '9'
-
 cache:
   yarn: true
-
 after_success:
-  - yarn run report-coverage
+- yarn run report-coverage
+deploy:
+  provider: npm
+  email: mikededys@gmail.com
+  api_key:
+    secure: lBrNkupPj2tYLcPUsI5RH7VmVznAWZJRPij80dv7VRC8tM0w6j6uWA5po9hwxVKrlcd0mj5qTEEh6wwadBcyd/jha/p/rS8QQTi84Fph7QqUbucaqc7vwSf/vCvv9dK3d8IDRmnpTrlrVLr2kyglfsawqfHqhTHlzh7cFwCzKNfmCemtUv9wIPJagcSvN8EBzHyV4kZS6Tms0oUjAB9fVX2tUkeBpFFKEb3WhIoa8nDBV07eUHmIvmr7yGg1fyhQUaMV47mEhZx7dOK4LJTzZGek3rExlJt2JTdv5lWyjvPGi4F1eyct20dqiYwUE6H6ukXG8Ia3Hvlq2COg/55aI8AeFaorgzhIJhtKRBuOhG7IrGbKO1FmZ9Tejvez68rpXIYErQh34IVSpSS4P5cQCqUlj4BTVW88YLIjjYWxNKxApFk7CERYQNKfTwcrtmFgZeoNmnZFqX0HAFb1L7kIZcEeXhCNdlt6RNbEhPFEMeKKqqN2fw3KUcRUWhiknXgWOl8cyVxuYIfY5oBWgtwetdMSSXl3qJzX4nsdR6wuQzC5eOZLlQHqMsVvGwr+drwE3kwnTT4QBn8NRCDHwgpAm2bs8qA8U1x+t0+tMAQmb0TRL9nwqsTJLmA7DGFHGW1MKkiS9ToIREubrhVy/2odeGtCj+4z4eurL33k7QJzz40=
+  on:
+    tags: true
