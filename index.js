@@ -16,8 +16,8 @@ function TestReducer(reducer) {
       return this;
     },
     run: function() {
-      assert.exists(this.actionValue, "Missing action");
-      assert.exists(this.expectedValue, "Missing expected value");
+      assert.isDefined(this.actionValue, "Missing action");
+      assert.isDefined(this.expectedValue, "Missing expected value");
 
       const result = this.reducer(this.stateValue, this.actionValue);
       assert.deepEqual(result, this.expectedValue);
