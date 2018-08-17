@@ -6,6 +6,8 @@
 
 # redux-reducer-test-plan
 
+Easily test reducers by passing a state, action and expected result.
+
 ## Install
 
 ```
