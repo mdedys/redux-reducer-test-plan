@@ -32,7 +32,7 @@ describe("Some test", () => {
 })
 ```
 
-`.expect` can be a value of a function. If it is a function is calls the passing function with following values:
+`.expect` can be a value or a function. If it is a function is calls the passing function with following values:
 
 `result` and `prevState`
 
