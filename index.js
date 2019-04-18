@@ -2,6 +2,13 @@ function isFunction(value) {
   return typeof value === "function"
 }
 
+function isDefined(value) {
+  if (value === null || value === undefined) {
+    return false
+  }
+  return true
+}
+
 function TestReducer(reducer) {
   return {
     reducer: reducer,
@@ -18,8 +25,17 @@ function TestReducer(reducer) {
       return this
     },
     run: function() {
-      expect(this.actionValue).toBeDefined()
-      expect(this.expectedValue).toBeDefined()
+      if (!isDefined(this.actionValue)) {
+        throw new Error(
+          "Missing action value: expected undefined to not equal undefined"
+        )
+      }
+
+      if (!isDefined(this.expectedValue)) {
+        throw new Error(
+          "Missing expected value: expected undefined to not equal undefined"
+        )
+      }
 
       const result = this.reducer(this.stateValue, this.actionValue)
 
