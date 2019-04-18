@@ -1,6 +1,6 @@
 {
   "name": "redux-reducer-test-plan",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Test utility for redux reducers",
   "main": "index.js",
   "author": "Mike Dedys <mikededys@gmail.com>",
@@ -10,10 +10,9 @@
     "coverage": "nyc mocha ./__tests__/index.js",
     "report-coverage": "cat ./coverage/lcov.info | coveralls"
   },
-  "dependencies": {
-    "chai": "^4.1.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "chai": "^4.1.2",
     "coveralls": "^3.0.2",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2"

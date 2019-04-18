@@ -1,28 +1,35 @@
-const assert = require("chai").assert;
+function isFunction(value) {
+  return typeof value === "function"
+}
 
 function TestReducer(reducer) {
   return {
     reducer: reducer,
     action: function(action) {
-      this.actionValue = action;
-      return this;
+      this.actionValue = action
+      return this
     },
     state: function(state) {
-      this.stateValue = state;
-      return this;
+      this.stateValue = state
+      return this
     },
     expect: function(expected) {
-      this.expectedValue = expected;
-      return this;
+      this.expectedValue = expected
+      return this
     },
     run: function() {
-      assert.isDefined(this.actionValue, "Missing action");
-      assert.isDefined(this.expectedValue, "Missing expected value");
+      expect(this.actionValue).toBeDefined()
+      expect(this.expectedValue).toBeDefined()
 
-      const result = this.reducer(this.stateValue, this.actionValue);
-      assert.deepEqual(result, this.expectedValue);
+      const result = this.reducer(this.stateValue, this.actionValue)
+
+      if (isFunction(this.expectedValue)) {
+        this.expectedValue(result, this.stateValue)
+      } else {
+        expect(result).toEqual(this.expectedValue)
+      }
     }
-  };
+  }
 }
 
-module.exports = TestReducer;
+module.exports = TestReducer
