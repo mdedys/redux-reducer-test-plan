@@ -1,4 +1,5 @@
 [![NPM version][npm-image]][npm-url]
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/58505d272d3d40b8b09b0ac535d5f192)](https://app.codacy.com/app/mike_45/redux-reducer-test-plan?utm_source=github.com&utm_medium=referral&utm_content=mdedys/redux-reducer-test-plan&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/mdedys/redux-reducer-test-plan.svg?branch=master)](https://travis-ci.org/mdedys/redux-reducer-test-plan)
 [![dependencies Status](https://david-dm.org/mdedys/redux-reducer-test-plan/status.svg)](https://david-dm.org/mdedys/redux-reducer-test-plan)
 [![devDependencies Status](https://david-dm.org/mdedys/redux-reducer-test-plan/dev-status.svg)](https://david-dm.org/mdedys/redux-reducer-test-plan?type=dev)
