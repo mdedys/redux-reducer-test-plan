@@ -6,8 +6,7 @@
   "author": "Mike Dedys <mikededys@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest ./__tests__/index.js",
-    "coverage": "jest ./__tests__/index.js --coverage",
+    "test": "jest ./__tests__/index.js --coverage",
     "report-coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {},
