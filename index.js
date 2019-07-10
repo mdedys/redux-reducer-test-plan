@@ -9,9 +9,12 @@ function isDefined(value) {
   return true
 }
 
-function TestReducer(reducer) {
+function reducerTestPlan(reducer) {
   return {
     reducer: reducer,
+    actionValue: null,
+    stateValue: null,
+    expectedValue: null,
     action: function(action) {
       this.actionValue = action
       return this
@@ -48,4 +51,4 @@ function TestReducer(reducer) {
   }
 }
 
-module.exports = TestReducer
+module.exports = reducerTestPlan
