@@ -1,6 +1,6 @@
 {
   "name": "redux-reducer-test-plan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Test utility for redux reducers",
   "main": "index.js",
   "author": "Mike Dedys <mikededys@gmail.com>",
